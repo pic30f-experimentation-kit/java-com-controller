@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane
+        prefHeight="400.0"
+        prefWidth="600.0"
+        xmlns="http://javafx.com/javafx/17.0.12"
+        xmlns:fx="http://javafx.com/fxml/1"
+        fx:controller="com.pic30f_experimentation_kit.com_controller.listeners.UiController">
+  <VBox fx:id="vBox" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="100.0">
+    <Label fx:id="label" text="Label" />
+    <Button fx:id="button" text="Button" />
+  </VBox>
+</AnchorPane>

@@ -1,13 +1,16 @@
 package com.pic30f_experimentation_kit.com_controller;
 
+import javafx.application.Application;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * Spring boot entry point.
+ */
 @SpringBootApplication
 public class ComControllerApplication {
-
 	public static void main(String[] args) {
-		SpringApplication.run(ComControllerApplication.class, args);
+		// Starts Java FX:
+		Application.launch(JavaFxStarter.class, args);
 	}
-
 }
