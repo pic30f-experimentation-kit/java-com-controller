@@ -1,7 +1,7 @@
-spring
-  application
-    name=com-controller
-  main
-    web-application-type=none
-ui
-  title=Beautiful Java Application
+spring:
+  application:
+    name: com-controller
+  main:
+    web-application-type: none
+ui:
+  title: Beautiful Java Application
