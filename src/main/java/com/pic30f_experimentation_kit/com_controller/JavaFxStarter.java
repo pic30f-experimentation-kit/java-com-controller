@@ -14,7 +14,7 @@ import org.springframework.context.support.GenericApplicationContext;
  * Starter class for Java FX.
  */
 public class JavaFxStarter extends Application {
-    ConfigurableApplicationContext context;
+    private ConfigurableApplicationContext springContext;
 
     @Override
     public void init() {
@@ -24,7 +24,7 @@ public class JavaFxStarter extends Application {
             ac.registerBean(HostServices.class, this::getHostServices);
         };
 
-        this.context = new SpringApplicationBuilder()
+        this.springContext = new SpringApplicationBuilder()
                 .sources(ComControllerApplication.class)
                 .initializers(initializer)
                 .run(getParameters().getRaw().toArray(new String[0]));
@@ -32,12 +32,12 @@ public class JavaFxStarter extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        this.context.publishEvent(new StageReadyEvent(stage));
+        this.springContext.publishEvent(new StageReadyEvent(stage));
     }
 
     @Override
     public void stop() {
-        this.context.close();
+        this.springContext.close();
         Platform.exit();
     }
 }

@@ -26,6 +26,7 @@ public class UiController {
     @FXML
     public void initialize() {
         this.label.setText("Don't you dare to click");
-        this.button.setOnAction(ae -> label.setText(hostServices.getDocumentBase()));
+        ButtonHandler buttonHandler = new ButtonHandler(label, hostServices);
+        this.button.setOnAction(buttonHandler);
     }
 }

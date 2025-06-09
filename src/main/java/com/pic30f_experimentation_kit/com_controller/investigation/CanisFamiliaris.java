@@ -1,8 +1,6 @@
 package com.pic30f_experimentation_kit.com_controller.investigation;
 
-import org.apache.commons.lang3.builder.EqualsBuilder;
-
-public class CanisFamiliaris extends Animal {
+public class CanisFamiliaris extends AnimalImpl {
     public CanisFamiliaris() {
         super("Canis", "Familiaris");
     }
