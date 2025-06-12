@@ -1,4 +1,4 @@
-package com.pic30f_experimentation_kit.com_controller.events;
+package com.pic30f_experimentation_kit.com_controller.listeners;
 
 import javafx.stage.Stage;
 import org.springframework.context.ApplicationEvent;

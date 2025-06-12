@@ -1,6 +1,6 @@
 package com.pic30f_experimentation_kit.com_controller;
 
-import com.pic30f_experimentation_kit.com_controller.events.StageReadyEvent;
+import com.pic30f_experimentation_kit.com_controller.listeners.StageReadyEvent;
 import javafx.application.Application;
 import javafx.application.HostServices;
 import javafx.application.Platform;
@@ -25,7 +25,7 @@ public class JavaFxStarter extends Application {
         };
 
         this.springContext = new SpringApplicationBuilder()
-                .sources(ComControllerApplication.class)
+                .sources(Main.class)
                 .initializers(initializer)
                 .run(getParameters().getRaw().toArray(new String[0]));
     }
