@@ -19,10 +19,14 @@ public class JavaFxStarter extends Application {
     @Override
     public void init() {
         ApplicationContextInitializer<GenericApplicationContext> initializer = ac -> {
-            ac.registerBean(Application.class, () -> JavaFxStarter.this);
-            ac.registerBean(Parameters.class, this::getParameters);
-            ac.registerBean(HostServices.class, this::getHostServices);
+            ac.registerBean(Application.class, () -> JavaFxStarter.this); //Registra la instancia de JavaFxStarter como un bean de tipo Application.
+            //Le estamos diciendo: registra un bean de tipo Application, y para crearlo usa la función lambda () -> JavaFxStarter.this
+            //
+            ac.registerBean(Parameters.class, this::getParameters); //Registra los parámetros de la aplicación como un bean de tipo Parameters.
+            ac.registerBean(HostServices.class, this::getHostServices); //
         };
+        // Initializer es una función lambda. Recibe un GenericApplicationContext y registra beans en él.
+        // registerBean es para guardar beans en el contexto pero de forma explícita, sin usar @Component
 
         this.springContext = new SpringApplicationBuilder()
                 .sources(Main.class)
