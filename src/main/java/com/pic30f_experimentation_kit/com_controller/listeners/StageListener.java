@@ -1,7 +1,7 @@
 package com.pic30f_experimentation_kit.com_controller.listeners;
 
 import com.pic30f_experimentation_kit.com_controller.configuration.UiConfiguration;
-import com.pic30f_experimentation_kit.com_controller.events.StageReadyEvent;
+import com.pic30f_experimentation_kit.com_controller.ui.ControllerFactory;
 import jakarta.annotation.PostConstruct;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

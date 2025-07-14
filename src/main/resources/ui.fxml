@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
-<AnchorPane
-        prefHeight="400.0"
-        prefWidth="600.0"
-        xmlns="http://javafx.com/javafx/17.0.12"
-        xmlns:fx="http://javafx.com/fxml/1"
-        fx:controller="com.pic30f_experimentation_kit.com_controller.listeners.UiController">
-  <VBox fx:id="vBox" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="100.0">
-    <Label fx:id="label" text="Label" />
-    <Button fx:id="button" text="Button" />
+<AnchorPane prefHeight="124.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pic30f_experimentation_kit.com_controller.ui.UiController">
+  <VBox fx:id="vBox" layoutX="14.0" layoutY="14.0" prefHeight="140.0" prefWidth="569.0">
+    <Label fx:id="sliderLabel" text="Pick a position" />
+    <Slider fx:id="slider"/>
+    <Label fx:id="colorPickerLabel" text="Pick a color" />
+    <ColorPicker fx:id="colorPicker"/>
+    <CheckBox fx:id="sendContinuously" text="Send continuously" />
+    <Button fx:id="sendNow" text="Send now" />
   </VBox>
 </AnchorPane>

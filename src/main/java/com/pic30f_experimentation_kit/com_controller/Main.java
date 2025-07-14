@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * Spring boot entry point.
  */
 @SpringBootApplication
-public class ComControllerApplication {
+public class Main {
 	public static void main(String[] args) {
 		// Starts Java FX:
 		Application.launch(JavaFxStarter.class, args);
